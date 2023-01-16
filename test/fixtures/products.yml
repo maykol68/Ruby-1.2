@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+ps4:
+  title: ps4 pro
+  description: ps4 en mal estado
+  price: 150
+
+switch:
+  title: nintendo switch
+  description: le falla el lector de tarjeta
+  price: 200
