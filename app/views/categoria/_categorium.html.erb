@@ -1,0 +1,10 @@
+<div id="<%= dom_id categorium %>">
+    <%= categorium.name %>
+    <%= link_to t('.edit'), edit_categorium_path(categorium)%>
+    <%= link_to t('.delete'), categorium_path(categorium), data:{
+    turbo_method: :delete,
+    turbo_confirm:  t('common.confirm')
+} %>
+
+
+</div>

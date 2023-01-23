@@ -1,0 +1,16 @@
+<%= form_with(model: categorium) do |form| %>
+    <% @categorium.errors.full_messages.each do |error|%>
+    <div style= "color: red" >
+        <%= error %><br>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :name%>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
