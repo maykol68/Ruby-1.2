@@ -4,8 +4,16 @@ ps4:
   title: ps4 pro
   description: ps4 en mal estado
   price: 150
+  categorium: videogames
 
 switch:
   title: nintendo switch
   description: le falla el lector de tarjeta
   price: 200
+  categorium: videogames
+
+air:
+  title: macbook air
+  description: le falla la bateria
+  price: 250
+  categorium: computers

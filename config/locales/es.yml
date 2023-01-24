@@ -2,12 +2,14 @@ es:
   activerecord:
     models:
       product: Producto
+      categorium: 'Categoría'
     attributes:
       product:
         title: 'Titulo'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
+        Categorium_id: 'Categoría'
     errors:
       models:
         product:
@@ -18,8 +20,13 @@ es:
               blank: 'No puede estar vacía'
             price:
               blank: 'No puede estar vacío'
+  shared:
+    header:
+      add: 'Añadir Producto'
+      categoria: 'Categorias'
   common:
     confirm: '¿Esta seguro?'
+    back: 'Regresar'
   products:
     edit: 
       title: 'Editar producto'

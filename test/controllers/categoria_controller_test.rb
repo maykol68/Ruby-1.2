@@ -1,8 +1,7 @@
 require "test_helper"
-
 class CategoriaControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @categorium = categoria(:one)
+    @categorium = categoria(:clothes)
   end
 
   test "should get index" do

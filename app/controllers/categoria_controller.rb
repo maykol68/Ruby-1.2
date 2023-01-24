@@ -1,7 +1,7 @@
 class CategoriaController < ApplicationController
   # GET /categoria or /categoria.json
   def index
-    @categoria = Categorium.all
+    @categoria = Categorium.all.order(name: :asc)
   end
 
 
@@ -27,20 +27,17 @@ class CategoriaController < ApplicationController
 
   # PATCH/PUT /categoria/1 or /categoria/1.json
   def update
-
       if categorium.update(categorium_params)
          redirect_to categoria_url, notice: t('.updated') 
       else
         render :edit, status: :unprocessable_entity 
       end
-    end
   end
 
   # DELETE /categoria/1 or /categoria/1.json
   def destroy
     categorium.destroy
        redirect_to categoria_url, notice: "Categorium was successfully destroyed." 
-    end
   end
 
   private

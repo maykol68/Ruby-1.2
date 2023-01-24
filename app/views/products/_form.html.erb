@@ -12,6 +12,9 @@
     <%= form.label :price%>
     <%= form.number_field :price%><br><br>
 
+    <%= form.label :Categorium_id %>
+    <%= form.collection_select :Categorium_id, Categorium.all.order(name: :asc), :id, :name%><br><br>
+
     <%= form.label :photo%>
     <%= form.file_field :photo%><br><br>
 
