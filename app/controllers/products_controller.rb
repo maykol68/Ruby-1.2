@@ -1,7 +1,12 @@
 class ProductsController < ApplicationController
 
     def index
-        @products = Product.all.with_attached_photo.order(created_at: :desc)
+        @categoria = Categorium.order(name: :asc).load_async
+        @products = Product.all.with_attached_photo.order(created_at: :desc).load_async
+
+        if params[:categorium_id]
+            @products = @products.where(categorium_id: params[:categorium_id])
+        end
     end
     
     def show
