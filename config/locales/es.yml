@@ -9,7 +9,7 @@ es:
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
-        Categorium_id: 'Categoría'
+        categorium_id: 'Categoría'
     errors:
       models:
         product:
@@ -38,6 +38,9 @@ es:
       min_price: 'Precio minimo'
       max_price: 'Precio maximo'
       query_text: '¿Que quieres buscar?'
+      expensive: 'Más caro'
+      cheapest: 'Más barato'
+      newest: 'Añadidos recientemente'
     create:
       created: 'Tu producto se ha creado correctamente'
     update:
