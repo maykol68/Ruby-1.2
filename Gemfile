@@ -45,6 +45,9 @@ gem "bootsnap", require: false
 # Postgresql fulltextsearch 
 gem "pg_search", "~> 2.3"
 
+#pagination
+gem "pagy", "~> 6.0"
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
@@ -75,3 +78,5 @@ group :test do
 end
 
 gem "pg_search", "~> 2.3"
+
+
