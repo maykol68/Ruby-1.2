@@ -104,6 +104,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       }
     }
 
+    ppppppppppppppppppppp
+
     assert_redirected_to products_path
     assert_equal flash[:notice], 'Tu producto se ha actualizado correctamente'
   end
