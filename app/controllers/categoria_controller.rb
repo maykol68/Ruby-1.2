@@ -1,12 +1,9 @@
 class CategoriaController < ApplicationController
-  # GET /categoria or /categoria.json
+
   def index
     @categoria = Categorium.all.order(name: :asc)
   end
 
-
-
-  # GET /categoria/new
   def new
     @categorium = Categorium.new
   end
