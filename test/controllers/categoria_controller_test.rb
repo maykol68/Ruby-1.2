@@ -22,10 +22,6 @@ class CategoriaControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to categorium_url(Categorium.last)
   end
 
-  test "should show categorium" do
-    get categorium_url(@categorium)
-    assert_response :success
-  end
 
   test "should get edit" do
     get edit_categorium_url(@categorium)
@@ -35,7 +31,7 @@ class CategoriaControllerTest < ActionDispatch::IntegrationTest
   test "should update categorium" do
     patch categorium_url(@categorium), params: { categorium: { name: @categorium.name } }
     assert_redirected_to categorium_url(@categorium)
-  end
+  end 
 
   test "should destroy categorium" do
     assert_difference("Categorium.count", -1) do

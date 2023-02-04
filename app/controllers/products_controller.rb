@@ -2,27 +2,8 @@ class ProductsController < ApplicationController
 
     def index
         @categoria = Categorium.order(name: :asc).load_async
-        @products = Product.with_attached_photo
-
-        if params[:categorium_id]
-            @products = @products.where(categorium_id: params[:categorium_id])
-        end
-
-        if params[:min_price].present?
-            @products = @products.where("price >= ?", params[:min_price])
-        end
-        if params[:max_price].present?
-            @products = @products.where("price <= ?", params[:max_price])
-        end
-        if params[:query_text].present?
-            @products = @products.search_full_text(params[:query_text])
-        end
-    
-        order_by = Product::ORDER_BY.fetch(params[:order_by]&.to_sym, Product::ORDER_BY[:newest])
-        @products = @products.order(order_by).load_async
-
-
-        @pagy, @products = pagy_countless(@products, items: 12)
+        
+        @pagy, @products = pagy_countless(FindProducts.new.call(params).load_async, items: 12)
 
     end
     
