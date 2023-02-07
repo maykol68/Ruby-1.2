@@ -46,7 +46,7 @@ gem "bootsnap", require: false
 gem "pg_search", "~> 2.3"
 
 #pagination
-gem "pagy", "~> 6.0"
+gem "pagy", "~> 5.10"
 
 # Use Sass to process CSS
 # gem "sassc-rails"
