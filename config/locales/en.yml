@@ -1,4 +1,6 @@
 en:
+  app_name: 'Sellit'
+  meta_title: 'buy and sell second hand products!'
   activerecord:
     models:
       product: Product

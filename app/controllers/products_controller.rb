@@ -3,7 +3,7 @@ class ProductsController < ApplicationController
     def index
         @categoria = Categorium.order(name: :asc).load_async
         
-        @pagy, @products = pagy_countless(FindProducts.new.call(params).load_async, items: 12)
+        @pagy, @products = pagy_countless(FindProducts.new.call(product_params_index).load_async, items: 12)
 
     end
     
@@ -54,5 +54,10 @@ class ProductsController < ApplicationController
     def product
         @product = Product.find(params[:id])
     end
+
+    def product_params_index
+        params.permit(:max_price, :min_price, :categorium_id,:query_text,:order_by)
+    end
+
 
 end
