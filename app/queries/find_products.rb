@@ -7,7 +7,7 @@ class FindProducts
   
     def call(params = {})
       scoped = products
-      scoped = filter_by_category_id(scoped, params[:categorium_id])
+      scoped = filter_by_categorium_id(scoped, params[:categorium_id])
       scoped = filter_by_min_price(scoped, params[:min_price])
       scoped = filter_by_max_price(scoped, params[:max_price])
       scoped = filter_by_query_text(scoped, params[:query_text])
@@ -20,10 +20,10 @@ class FindProducts
       Product.with_attached_photo
     end
   
-    def filter_by_category_id(scoped, categorium_id)
-      return scoped unless category_id.present?
+    def filter_by_categorium_id(scoped, categorium_id)
+      return scoped unless categorium_id.present?
   
-      scoped.where(category_id: category_id)
+      scoped.where(categorium_id: categorium_id)
     end
   
     def filter_by_min_price(scoped, min_price)

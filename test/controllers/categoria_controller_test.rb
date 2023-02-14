@@ -1,4 +1,5 @@
 require "test_helper"
+
 class CategoriaControllerTest < ActionDispatch::IntegrationTest
   setup do
     @categorium = categoria(:clothes)
@@ -19,9 +20,8 @@ class CategoriaControllerTest < ActionDispatch::IntegrationTest
       post categoria_url, params: { categorium: { name: @categorium.name } }
     end
 
-    assert_redirected_to categorium_url(Categorium.last)
+    assert_redirected_to categoria_url
   end
-
 
   test "should get edit" do
     get edit_categorium_url(@categorium)
@@ -30,8 +30,8 @@ class CategoriaControllerTest < ActionDispatch::IntegrationTest
 
   test "should update categorium" do
     patch categorium_url(@categorium), params: { categorium: { name: @categorium.name } }
-    assert_redirected_to categorium_url(@categorium)
-  end 
+    assert_redirected_to categoria_url
+  end
 
   test "should destroy categorium" do
     assert_difference("Categorium.count", -1) do
