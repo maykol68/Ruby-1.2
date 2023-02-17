@@ -77,6 +77,4 @@ group :test do
   gem "webdrivers"
 end
 
-gem "pg_search", "~> 2.3"
-
 
