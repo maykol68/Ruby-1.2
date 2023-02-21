@@ -2,6 +2,7 @@ require "test_helper"
 
 class CategoriaControllerTest < ActionDispatch::IntegrationTest
   setup do
+    login
     @categorium = categoria(:clothes)
   end
 
