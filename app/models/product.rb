@@ -19,4 +19,5 @@ class Product < ApplicationRecord
     validates :price, presence: true
 
     belongs_to :categorium
+    belongs_to :user, default: ->{ Current.user }
 end
