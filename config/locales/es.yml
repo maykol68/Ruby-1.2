@@ -1,57 +1,60 @@
 es:
-  app_name: 'Compralo'
-  meta_title: 'Compra y vende productos de segunda mano!'
+  app_name: 'Compralo!'
+  meta_title: 'Compra y vende productos de segunda mano'
   activerecord:
     models:
       product: Producto
-      categorium: 'Categoría'
+      user: Usuario
+      categorium: Categoría
     attributes:
       product:
-        title: 'Titulo'
+        title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Foto'
-        categorium_id: 'Categoría'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: 'No puede estar vacío'
-            description:
-              blank: 'No puede estar vacía'
-            price:
-              blank: 'No puede estar vacío'
+      user:
+        email: 'Correo electrónico'
+        username: 'Usuario'
+        password: 'Contraseña'
+      categorium:
+        name: 'Nombre'
+  common:
+    confirm: '¿Estás seguro?'
+    back: 'Volver'
+    not_logged_in: 'Tienes que hacer login o crearte una cuenta'
   shared:
     header:
-      add: 'Añadir Producto'
-      categoria: 'Categorias'
+      add: 'Añadir producto'
+      login: 'Acceso'
+      register: 'Registro'
+      logout: 'Salir'
   authentication:
     users:
       create:
-        created: 'Tu cuenta se ha creado! '
+        created: 'Tu cuenta se ha creado!'
     sessions:
       create:
-        created: 'Bienvenido! '    
-        failed: 'Login inválido!'    
-  common:
-    confirm: '¿Esta seguro?'
-    back: 'Regresar'
-    not_logged_in: 'Tienes que logearte o crear una cuenta'
+        created: 'Bienvenido!'
+        failed: 'Login inválido!'
+      destroy:
+        destroyed: 'Tu sesión ha terminado! Hasta la próxima'
   products:
-    edit: 
+    edit:
       title: 'Editar producto'
     new:
-      title: 'añadir producto'
+      title: 'Añadir producto'
     index:
       title: 'Productos:'
       all: 'Todos'
-      min_price: 'Precio minimo'
-      max_price: 'Precio maximo'
-      query_text: '¿Que quieres buscar?'
-      expensive: 'Más caro'
+      min_price: 'Precio mínimo'
+      max_price: 'Precio máximo'
+      query_text: '¿Qué quieres buscar?'
+      expensive: 'Más caros'
       cheapest: 'Más barato'
       newest: 'Añadidos recientemente'
+    show:
+      edit: 'Editar producto'
+      delete: 'Borrar producto'
     create:
       created: 'Tu producto se ha creado correctamente'
     update:

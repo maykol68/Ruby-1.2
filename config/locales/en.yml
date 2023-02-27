@@ -1,25 +1,23 @@
 en:
-  app_name: 'Sellit'
-  meta_title: 'buy and sell second hand products!'
+  app_name: 'BuyIt'
+  meta_title: 'Buy and sell second hand products!'
   activerecord:
     models:
       product: Product
+      user: User
+      categorium: Category
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
-    errors:
-      models:
-        product:
-          attributes:
-            title:
-              blank: "can't be blank"
-            description:
-              blank: "can't be blank"
-            price:
-              blank: "can't be blank"
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
+      categorium:
+        name: 'Name'
   common:
     confirm: 'Are you sure?'
     back: 'Go back'
@@ -27,14 +25,19 @@ en:
   shared:
     header:
       add: 'Add product'
+      login: 'Login'
+      register: 'Register'
+      logout: 'Logout'
   authentication:
     users:
       create:
-        created: 'Your account has been created! '
+        created: 'Your account has been created!'
     sessions:
       create:
-        created: 'welcome! '
+        created: 'Welcome!'
         failed: 'Invalid login!'
+      destroy:
+        destroyed: 'Session ended. Bye!'
   products:
     edit:
       title: 'Edit product'
@@ -45,11 +48,11 @@ en:
       all: 'All'
       min_price: 'Min price'
       max_price: 'Max price'
-      query_text: 'what do you want to search?'
+      query_text: 'What do you want to search?'
       expensive: 'Expensive first'
       cheapest: 'Cheaper first'
       newest: 'Recently added'
-    show: 
+    show:
       edit: 'Edit product'
       delete: 'Delete product'
     create:
