@@ -4,14 +4,17 @@ paco:
   email: paco@compralo.com
   username: paco10
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: true
 
 maria:
-  email: maria@compralo
+  email: maria@compralo.com
   username: maria3
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: false
 
 pepe:
-  email: pepe@compralo
+  email: pepe@compralo.com
   username: pepito
   password_digest: <%= BCrypt::Password.create('testme', cost: 5) %>
+  admin: false
 

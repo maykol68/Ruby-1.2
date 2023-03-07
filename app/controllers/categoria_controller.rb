@@ -1,6 +1,7 @@
 class CategoriaController < ApplicationController
-
+   before_action :authorize!
   def index
+    authorize!
     @categoria = Categorium.all.order(name: :asc)
   end
 
